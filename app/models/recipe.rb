@@ -1,3 +1,5 @@
 class Recipe < ActiveRecord::Base
-  has_many :ingredients, through: :recipe
+  belongs_to :menu_item
+  belongs_to :ingredient 
+
 end

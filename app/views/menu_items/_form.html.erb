@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
+  <%= f.label "item name", :name %>
   <%= f.text_field :name %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
   <div class="actions">
     <%= f.submit %>
   </div>

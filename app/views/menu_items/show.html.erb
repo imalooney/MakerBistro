@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @menu_item.name %></h1>
-<h3><%= menu_item.price %></h3>
-<p><%= @menu_item.ingredients %></p>
+<h3>$<%= @menu_item.price %></h3>
+<p><%= @menu_item.recipes.ingredient.name %></p>
 
 <%= link_to 'Edit', edit_menu_item_path(@menu_item) %> |
 <%= link_to 'Back', menu_items_path %>
