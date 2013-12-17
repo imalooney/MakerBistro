@@ -1,7 +1,13 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @menu_item.name %></h1>
-<h3>$<%= @menu_item.price %></h3>
-<p><%= @menu_item.recipes.ingredient.name %></p>
+<p><strong>Price:</strong> $<%= @menu_item.price %></p>
+
+<p><h3>Ingredients</h3></p>
+<ul>
+  <% @ingredients.each do |recipe| %>
+      <li><%= recipe.ingredient.name %></li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_menu_item_path(@menu_item) %> |
 <%= link_to 'Back', menu_items_path %>

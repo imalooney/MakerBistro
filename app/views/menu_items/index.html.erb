@@ -5,16 +5,22 @@
     <tr>
       <th>Item</th>
       <th>Price</th>
-      <th></th>
+      <th>Ingredients</th>
     </tr>
   </thead>
 
   <tbody>
     <% @menu_items.each do |menu_item| %>
       <tr>
-        <td><p><%= menu_item.name %></p></td>
+        <td><%= link_to menu_item.name, menu_item %></p></td>
         <td><p>$<%= menu_item.price %></p></td>
-        <td><%= link_to 'Show', menu_item %></td>
+        <td>
+          <ul>
+            <% menu_item.recipes.all.each do |recipe| %>
+                <li><%= recipe.ingredient.name %></li>
+            <% end %>
+          </ul>
+        </td>
         <td><%= link_to 'Edit', edit_menu_item_path(menu_item) %></td>
         <td><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

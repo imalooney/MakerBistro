@@ -6,17 +6,32 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-hamburger = MenuItem.create ( { name:"hamburger" }, { price:5 })
+burger = MenuItem.create(
+  name: "hamburger", 
+  price: 5
+  )
 
-# sandwich = MenuItem.create ({ name: "club sandwich" }, { price: 4 })
+sandwich = MenuItem.create (
+  name: "club sandwich", 
+  price: 4
+  )
 
-# bacon = Ingredient.create ({name: "bacon" })
+bacon = Ingredient.create(
+  name: "bacon"
+  )
 
-# beef = Ingredient.create ({ name: "grass-fed beef" })
+beef = Ingredient.create(
+  name: "grass-fed beef"
+  )
 
-# bread = Ingredient.create ({ name: "really good bread" })
+bread = Ingredient.create(
+  name: "really good bread"
+  )
 
-# chicken = Ingredient.create ({ name: "chicken" })
+chicken = Ingredient.create(
+  name: "chicken"
+  )
+
 
 # hamburger.recipe.ingredients = beef
 # hamburger.recipe.ingredients = bacon

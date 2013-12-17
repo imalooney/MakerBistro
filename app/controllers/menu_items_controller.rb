@@ -10,6 +10,7 @@ class MenuItemsController < ApplicationController
   # GET /menu_items/1
   # GET /menu_items/1.json
   def show
+    @ingredients = @menu_item.recipes.all
   end
 
   # GET /menu_items/new
