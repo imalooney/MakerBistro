@@ -1,4 +1,4 @@
-<%= form_for(@menu_item) do |f| %>
+<%= form_for @menu_item do |f| %>
   <% if @menu_item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@menu_item.errors.count, "error") %> prohibited this menu_item from being saved:</h2>
@@ -10,10 +10,18 @@
       </ul>
     </div>
   <% end %>
+
   <%= f.label "item name", :name %>
   <%= f.text_field :name %>
   <%= f.label :price %>
   <%= f.text_field :price %>
+
+  <%= form_for [@menu_item, @ingredient] do |f| %>
+  <%= f.label :name, "ingredient name" %>
+  <%= f.text_field :name %>
+  <% end %>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

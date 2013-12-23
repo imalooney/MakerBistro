@@ -11,7 +11,7 @@ class MenuItemsController < ApplicationController
   # GET /menu_items/1
   # GET /menu_items/1.json
   def show
-    @ingredients = @menu_item.recipes.all
+    @recipes = @menu_item.recipes.all
   end
 
   # GET /menu_items/new
@@ -21,6 +21,8 @@ class MenuItemsController < ApplicationController
 
   # GET /menu_items/1/edit
   def edit
+    @ingredients = @menu_item.ingredients.all
+    @ingredient = @menu_item.ingredients.new
   end
 
   # POST /menu_items
